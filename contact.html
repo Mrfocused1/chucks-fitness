@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Chuks Fitness</title>
+  <meta name="description" content="Get in touch with Chuks Fitness — online & in-person coaching in London. Questions, bookings, or just to say hello." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="theme-color" content="#0f0f0f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/booking.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body class="booking-page">
+
+  <header class="bk-header">
+    <a href="index.html" class="bk-logo">Chuks Fitness</a>
+    <a href="booking.html" class="bk-stepcount" style="text-decoration:none">Book a session</a>
+    <a href="index.html" class="bk-back hover-effect">Back to site</a>
+  </header>
+
+  <main class="bk-wrap">
+    <div class="contact-grid">
+
+      <!-- info -->
+      <div class="contact-info">
+        <h1>Let's talk</h1>
+        <p class="lead">Got a question about coaching, want to book a session, or just want to see if I'm the right fit for you? Drop me a message — I read every one and reply within a day.</p>
+        <div class="contact-list">
+          <div class="row"><span class="k">Email</span><span class="v"><a href="mailto:hello@chuksfitness.com" class="hover-effect">hello@chuksfitness.com</a></span></div>
+          <div class="row"><span class="k">WhatsApp</span><span class="v"><a href="https://wa.me/447000000000" class="hover-effect">+44 7000 000000</a></span></div>
+          <div class="row"><span class="k">Where</span><span class="v">London studio · Online worldwide</span></div>
+          <div class="row"><span class="k">Reply time</span><span class="v">Within 24 hours</span></div>
+        </div>
+        <div class="contact-socials">
+          <a href="https://www.instagram.com/chuks_coach1/" class="hover-effect" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@chukspt0" class="hover-effect" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+
+      <!-- form -->
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="two">
+          <div class="field"><label for="cName">Name</label><input id="cName" type="text" placeholder="Your name" autocomplete="name" /></div>
+          <div class="field"><label for="cEmail">Email</label><input id="cEmail" type="email" placeholder="you@email.com" autocomplete="email" /></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="cPhone">Phone <span style="color:var(--gray-500)">(optional)</span></label><input id="cPhone" type="tel" placeholder="+44…" autocomplete="tel" /></div>
+          <div class="field"><label for="cInterest">I'm interested in</label>
+            <select id="cInterest">
+              <option value="Online coaching">Online coaching</option>
+              <option value="1:1 in-person">1:1 in-person</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="Small group">Small group</option>
+              <option value="Something else">Something else</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="cMsg">Message</label><textarea id="cMsg" rows="5" placeholder="Tell me a bit about your goals and what you're after…"></textarea></div>
+        <button type="submit" class="btn btn-primary send" id="cSend" disabled>Send message</button>
+        <p class="form-note">Prefer to talk? <a href="https://wa.me/447000000000" class="hover-effect" style="color:var(--brand-500)">Message me on WhatsApp</a>.</p>
+
+        <div class="contact-success" id="contactSuccess">
+          <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="#0f0f0f" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></div>
+          <h2>Message sent</h2>
+          <p>Thanks — I've got it. I'll get back to you within 24 hours. Check your inbox.</p>
+        </div>
+      </form>
+
+    </div>
+  </main>
+
+  <script src="vendor/gsap/gsap.min.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

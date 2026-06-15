@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a session — Chuks Fitness</title>
+  <meta name="description" content="Book your free first session with Chuks Fitness — online or in-person coaching in London." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="theme-color" content="#0f0f0f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/booking.css" />
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body class="booking-page">
+
+  <header class="bk-header">
+    <a href="index.html" class="bk-logo">Chuks Fitness</a>
+    <span class="bk-stepcount">Step <b id="stepNow">1</b> / 4</span>
+    <a href="index.html" class="bk-back hover-effect">Back to site</a>
+  </header>
+
+  <main class="bk-wrap">
+    <div class="bk-grid">
+      <div class="bk-main">
+
+        <!-- stepper -->
+        <div class="stepper" id="stepper">
+          <div class="stepper__item active"><span class="stepper__dot">1</span><span class="stepper__label">Session</span></div>
+          <span class="stepper__bar"></span>
+          <div class="stepper__item"><span class="stepper__dot">2</span><span class="stepper__label">Date</span></div>
+          <span class="stepper__bar"></span>
+          <div class="stepper__item"><span class="stepper__dot">3</span><span class="stepper__label">Details</span></div>
+          <span class="stepper__bar"></span>
+          <div class="stepper__item"><span class="stepper__dot">4</span><span class="stepper__label">Account</span></div>
+        </div>
+
+        <!-- STEP 1 — session -->
+        <section class="step is-active" data-step="0">
+          <div class="step__head"><h2>Choose your session</h2><p>Pick how you want to train. Your first session is on me — no card needed today.</p></div>
+          <div class="opt-grid">
+            <button class="opt" data-opt="Online coaching" data-meta="Anywhere · 45–60 min">
+              <div class="opt__top"><span class="opt__name">Online coaching</span><span class="opt__check"><svg viewBox="0 0 24 24" fill="none" stroke="#0f0f0f" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span></div>
+              <span class="opt__meta">Anywhere · 45–60 min</span>
+              <span class="opt__desc">A personalised program, weekly check-ins and video feedback.</span>
+            </button>
+            <button class="opt" data-opt="1:1 in-person" data-meta="London · 60 min">
+              <div class="opt__top"><span class="opt__name">1:1 in&#8209;person</span><span class="opt__check"><svg viewBox="0 0 24 24" fill="none" stroke="#0f0f0f" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span></div>
+              <span class="opt__meta">London · 60 min</span>
+              <span class="opt__desc">Hands-on coaching at the studio. Every lift planned and corrected.</span>
+            </button>
+            <button class="opt" data-opt="Hybrid" data-meta="London + online · 60 min">
+              <div class="opt__top"><span class="opt__name">Hybrid</span><span class="opt__check"><svg viewBox="0 0 24 24" fill="none" stroke="#0f0f0f" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span></div>
+              <span class="opt__meta">London + online · 60 min</span>
+              <span class="opt__desc">In-person when you can, online programming when you can't.</span>
+            </button>
+            <button class="opt" data-opt="Small group" data-meta="London · 60 min">
+              <div class="opt__top"><span class="opt__name">Small group</span><span class="opt__check"><svg viewBox="0 0 24 24" fill="none" stroke="#0f0f0f" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span></div>
+              <span class="opt__meta">London · 60 min</span>
+              <span class="opt__desc">Train with a tight crew. Coached sessions, shared standards.</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- STEP 2 — date & time -->
+        <section class="step" data-step="1">
+          <div class="step__head"><h2>Pick a date &amp; time</h2><p>Choose a slot that works for you. Unavailable times are greyed out.</p></div>
+          <div class="cal-layout">
+            <div class="cal">
+              <div class="cal-head">
+                <span class="cal-title" id="calTitle">—</span>
+                <div class="cal-nav">
+                  <button id="calPrev" aria-label="Previous month"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+                  <button id="calNext" aria-label="Next month"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+                </div>
+              </div>
+              <div class="cal-dow"><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span></div>
+              <div class="cal-grid" id="calGrid"></div>
+            </div>
+            <div class="slots-wrap">
+              <h3>Available times</h3>
+              <div id="slots"><p class="slots-empty">Select a date to see available times.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 3 — about you -->
+        <section class="step" data-step="2">
+          <div class="step__head"><h2>A bit about you</h2><p>So I can tailor the session before you even arrive.</p></div>
+          <div class="field"><label for="fName">Your name</label><input id="fName" type="text" placeholder="First name" autocomplete="given-name" /></div>
+          <div class="field">
+            <label>Your main goal</label>
+            <div class="chip-row" data-chips="goal">
+              <button class="chip" data-val="Build strength">Build strength</button>
+              <button class="chip" data-val="Lose fat">Lose fat</button>
+              <button class="chip" data-val="Hybrid performance">Hybrid performance</button>
+              <button class="chip" data-val="Run / endurance">Run / endurance</button>
+              <button class="chip" data-val="HYROX">HYROX</button>
+              <button class="chip" data-val="Feel better">Feel better</button>
+            </div>
+          </div>
+          <div class="field">
+            <label>Experience</label>
+            <div class="chip-row" data-chips="level">
+              <button class="chip" data-val="New to training">New to training</button>
+              <button class="chip" data-val="Some experience">Some experience</button>
+              <button class="chip" data-val="Experienced">Experienced</button>
+            </div>
+          </div>
+          <div class="field"><label for="fNote">Anything I should know? (optional)</label><textarea id="fNote" rows="3" placeholder="Injuries, schedule, what you're really after…"></textarea></div>
+        </section>
+
+        <!-- STEP 4 — account -->
+        <section class="step" data-step="3">
+          <div class="step__head"><h2>Almost there</h2><p>Create your account to lock in your session — or log in if you've trained with me before.</p></div>
+          <div class="auth-tabs">
+            <button class="auth-tab is-active" data-auth="signup">Sign up</button>
+            <button class="auth-tab" data-auth="login">Log in</button>
+          </div>
+          <div class="field" data-signup-only><label for="aName">Full name</label><input id="aName" type="text" placeholder="Your name" autocomplete="name" /></div>
+          <div class="field"><label for="aEmail">Email</label><input id="aEmail" type="email" placeholder="you@email.com" autocomplete="email" /></div>
+          <div class="field"><label for="aPass">Password</label><input id="aPass" type="password" placeholder="••••••••" autocomplete="new-password" /></div>
+          <p class="auth-fine">By continuing you agree to the <a href="#">terms</a> &amp; <a href="#">privacy policy</a>.</p>
+        </section>
+
+        <!-- nav -->
+        <div class="bk-nav" id="bkNav">
+          <button class="btn btn-back is-hidden" id="btnBack" type="button">Back</button>
+          <button class="btn btn-primary" id="btnNext" type="button" disabled>Continue</button>
+        </div>
+
+        <!-- success -->
+        <div class="bk-success" id="bkSuccess">
+          <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="#0f0f0f" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></div>
+          <h2>You're booked</h2>
+          <p>Your first session is locked in. I've sent a confirmation to your email with everything you need.</p>
+          <div class="sum-card" id="successSummary"></div>
+          <a href="index.html" class="btn btn-primary">Back to site</a>
+        </div>
+
+      </div>
+
+      <!-- summary -->
+      <aside class="bk-summary">
+        <h3>Your booking</h3>
+        <div class="sum-row" data-goto="0"><span class="sum-k">Session</span><span class="sum-v empty" id="sumSession">Not selected</span></div>
+        <div class="sum-row" data-goto="1"><span class="sum-k">Date</span><span class="sum-v empty" id="sumDate">—</span></div>
+        <div class="sum-row" data-goto="1"><span class="sum-k">Time</span><span class="sum-v empty" id="sumTime">—</span></div>
+        <div class="sum-row" data-goto="2"><span class="sum-k">Goal</span><span class="sum-v empty" id="sumGoal">—</span></div>
+      </aside>
+
+    </div>
+  </main>
+
+  <script src="vendor/gsap/gsap.min.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

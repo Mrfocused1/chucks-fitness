@@ -1,0 +1,38 @@
+/* =========================================================
+   CHHUKS FITNESS — Contact page
+   ========================================================= */
+.contact-grid { display: grid; gap: clamp(2rem, 5vw, 4.5rem); }
+@media (min-width: 920px) { .contact-grid { grid-template-columns: 0.95fr 1.05fr; align-items: start; } }
+
+/* ---- left: info ---- */
+.contact-info h1 {
+  font-family: var(--font-display); text-transform: uppercase; color: var(--brand-500);
+  line-height: 0.88; letter-spacing: -0.01em; font-size: clamp(2.8rem, 9vw, 6.5rem);
+}
+.contact-info .lead { color: var(--gray-300); margin-top: 1.2rem; max-width: 42ch; }
+.contact-list { margin-top: clamp(2rem, 4vw, 3rem); display: grid; gap: 1.3rem; }
+.contact-list .row { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.1rem; }
+.contact-list .k { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray-500); }
+.contact-list .v { display: block; margin-top: 0.35rem; font-size: clamp(1.05rem, 1.6vw, 1.4rem); }
+.contact-list .v a:hover { color: var(--brand-500); }
+.contact-socials { margin-top: 2rem; display: flex; gap: 1.4rem; }
+.contact-socials a { font-family: var(--font-display); text-transform: uppercase; font-size: 1rem; color: var(--paper); }
+.contact-socials a:hover { color: var(--brand-500); }
+
+/* ---- right: form ---- */
+.contact-form { position: relative; background: #141414; border: 1px solid rgba(255,255,255,0.1); padding: clamp(1.5rem, 3vw, 2.6rem); }
+.contact-form .form-grid { display: grid; gap: 0; }
+@media (min-width: 560px) { .contact-form .two { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; } }
+.contact-form .send { width: 100%; justify-content: center; margin-top: 0.4rem; }
+.form-note { font-size: 0.78rem; color: var(--gray-500); margin-top: 1rem; text-align: center; }
+
+/* success overlay */
+.contact-success {
+  position: absolute; inset: 0; background: #141414; display: none;
+  flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;
+}
+.contact-success.is-active { display: flex; }
+.contact-success .tick { width: 76px; height: 76px; border-radius: 50%; background: var(--brand-500); display: grid; place-items: center; margin-bottom: 1.3rem; }
+.contact-success .tick svg { width: 36px; height: 36px; }
+.contact-success h2 { font-family: var(--font-display); text-transform: uppercase; font-size: clamp(1.8rem, 5vw, 3rem); color: var(--brand-500); line-height: 0.95; }
+.contact-success p { color: var(--gray-300); margin-top: 0.8rem; max-width: 34ch; }
