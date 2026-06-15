@@ -377,6 +377,18 @@
   function initMarkline() {
     const sec = q(".markline"); if (!sec) return;
     const video = q(".ml-video");
+    // sound toggle (video autoplays muted; let users unmute)
+    const sound = q(".ml-sound");
+    const vid = q(".ml-video video");
+    if (sound && vid) {
+      sound.addEventListener("click", () => {
+        vid.muted = !vid.muted;
+        sound.classList.toggle("is-on", !vid.muted);
+        sound.setAttribute("aria-pressed", String(!vid.muted));
+        sound.setAttribute("aria-label", vid.muted ? "Unmute video" : "Mute video");
+        if (!vid.muted) vid.play().catch(() => {});
+      });
+    }
     // grow uniformly (keeps the 9:16 ratio), capped at ~85vh AND native 1280px so it never softens
     const maxScale = () => Math.min(window.innerHeight * 0.85, 1280) / (window.innerHeight * 0.26);
     if (reduced) { gsap.set(video, { scale: maxScale() }); gsap.set(".ml-text", { opacity: 0 }); gsap.set(".ml-cta", { opacity: 1 }); return; }

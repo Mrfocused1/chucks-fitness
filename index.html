@@ -10,6 +10,10 @@
   <meta property="og:title" content="Chuks Fitness — Coaching that adapts to you" />
   <meta property="og:description" content="Coach-led training, online and in person. Programs built around your goals." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chuksfitness.site/" />
+  <meta property="og:image" content="https://chuksfitness.site/assets/img/hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://chuksfitness.site/assets/img/hero.jpg" />
 
   <!-- Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +21,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="vendor/lightgallery/lightgallery-bundle.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <script>document.documentElement.classList.remove('no-js');</script>
 </head>
@@ -35,9 +38,6 @@
     <nav class="hd-group hd-left"></nav>
     <a href="#top" class="hd-logo">Chuks Fitness</a>
     <nav class="hd-group hd-right">
-      <a href="https://wa.me/447000000000" class="hd-wa" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
-        <svg viewBox="0 0 32 32" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M16 .4C7.4.4.5 7.3.5 15.9c0 2.8.7 5.5 2.1 7.9L.3 31.6l8-2.1c2.3 1.3 4.9 1.9 7.6 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.5c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.8 1.3 1.3-4.6-.3-.5a12.7 12.7 0 0 1-2-6.8C2.9 8.7 8.8 2.9 16 2.9S29.1 8.7 29.1 15.9 23.2 28.9 16 28.9zm7.2-9.7c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1.1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8l.6-.7c.2-.3.3-.4.4-.7.1-.2 0-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.7-.6-.6-.9-.7h-.7c-.2 0-.6.1-1 .5s-1.3 1.3-1.3 3.1 1.3 3.6 1.5 3.9c.2.2 2.6 4 6.3 5.6.9.4 1.6.6 2.1.8.9.3 1.7.2 2.3.1.7-.1 2.3-.9 2.6-1.9.3-.9.3-1.7.2-1.8-.1-.2-.3-.3-.7-.4z"/></svg>
-      </a>
       <button class="menu-toggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -47,6 +47,7 @@
   <!-- ============== MENU OVERLAY ============== -->
   <div class="menu-overlay" aria-hidden="true">
     <nav>
+      <a href="#top" data-menu-link>Home</a>
       <a href="#programs" data-menu-link>Programs</a>
       <a href="booking.html" data-menu-link>Book a session</a>
       <a href="contact.html" data-menu-link>Contact</a>
@@ -177,7 +178,7 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="way-card">
-                    <img src="assets/programs/p3.jpg" alt="Online coaching" />
+                    <img src="assets/gallery/ways4.jpg" alt="Online coaching" />
                     <div class="way-card__body">
                       <h3>Online coaching</h3>
                       <p>A personalised program in your pocket, weekly check-ins and video feedback. Train on your schedule with a coach in your corner.</p>
@@ -186,7 +187,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="way-card">
-                    <img src="assets/programs/p2.jpg" alt="1:1 in-person coaching" />
+                    <img src="assets/gallery/ways1.jpg" alt="1:1 in-person coaching" />
                     <div class="way-card__body">
                       <h3>1:1 in&#8209;person</h3>
                       <p>Hands-on coaching at the London studio. Every session planned, every lift corrected, every rep accountable.</p>
@@ -195,7 +196,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="way-card">
-                    <img src="assets/programs/p4.jpg" alt="Hybrid coaching" />
+                    <img src="assets/gallery/ways2.jpg" alt="Hybrid coaching" />
                     <div class="way-card__body">
                       <h3>Hybrid</h3>
                       <p>In-person when you can, online programming when you can't. One plan, total consistency — no excuses, no gaps.</p>
@@ -204,7 +205,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="way-card">
-                    <img src="assets/programs/p1.jpg" alt="Small group training" />
+                    <img src="assets/gallery/ways3.jpg" alt="Small group training" />
                     <div class="way-card__body">
                       <h3>Small group</h3>
                       <p>Train with a tight crew that lifts you up. Coached sessions, shared standards and a community that shows up.</p>
@@ -236,15 +237,19 @@
         </section>
 
         <!-- ============== INSIDE THE TRAINING (culture-style layout) ============== -->
-        <section class="inside section-pad" id="inside">
-          <div class="container">
-            <h2 class="h-sec" data-split>Inside the training</h2>
-            <div class="inside-grid" id="lightgallery">
+        <section class="inside" id="inside">
+          <div class="inside-wall">
+            <div class="inside-tiles">
+              <div class="tile"><img src="assets/gallery/inside1.jpg" alt="Inside the training" /></div>
+              <div class="tile"><img src="assets/programs/strength.jpg" alt="Inside the training" /></div>
+              <div class="tile"><img src="assets/gallery/inside3.jpg" alt="Inside the training" /></div>
+              <div class="tile"><img src="assets/programs/conditioning.jpg" alt="Inside the training" /></div>
+              <div class="tile"><img src="assets/gallery/inside2.jpg" alt="Inside the training" /></div>
+              <div class="tile"><img src="assets/programs/hyrox.jpg" alt="Inside the training" /></div>
+            </div>
+            <div class="inside-overlay">
+              <h2 class="h-sec" data-split>Inside the training</h2>
               <p class="inside-statement">This is what real training looks like — coaching that knows you, a room that pushes you, and people who show up. Honest work, no ego, real progress.</p>
-              <a class="inside-img i-a" href="assets/gallery/inside1.jpg" data-speed="1.05"><img src="assets/gallery/inside1.jpg" alt="Inside the training" /></a>
-              <a class="inside-img i-b" href="assets/gallery/inside2.jpg" data-speed="1.13"><img src="assets/gallery/inside2.jpg" alt="Inside the training" /></a>
-              <a class="inside-img i-c" href="assets/gallery/inside3.jpg" data-speed="0.9"><img src="assets/gallery/inside3.jpg" alt="Inside the training" /></a>
-              <a class="inside-img i-d" href="assets/gallery/inside4.jpg" data-speed="0.98"><img src="assets/gallery/inside4.jpg" alt="Inside the training" /></a>
               <a href="booking.html" class="inside-cta">Book your free session</a>
             </div>
           </div>
@@ -257,6 +262,37 @@
             <div class="ml-video"><video src="assets/video/mark.mp4" autoplay muted loop playsinline preload="auto"></video></div>
             <div class="ml-text ml-text--bot"><span>Own</span><span>the results</span></div>
             <a href="booking.html" class="ml-cta">Book your free session</a>
+            <button class="ml-sound" aria-label="Unmute video" aria-pressed="false">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="4 9 4 15 8 15 13 19 13 5 8 9" fill="currentColor" stroke="none"/>
+                <g class="snd-on"><path d="M16 8.5a5 5 0 0 1 0 7"/><path d="M18.8 6a8 8 0 0 1 0 12"/></g>
+                <g class="snd-off"><line x1="17" y1="9.5" x2="22" y2="14.5"/><line x1="22" y1="9.5" x2="17" y2="14.5"/></g>
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        <!-- ============== TESTIMONIALS ============== -->
+        <section class="testi section-pad" id="results">
+          <div class="container">
+            <h2 class="h-sec" data-split>Real results</h2>
+            <div class="testi-grid">
+              <figure class="testi-card" data-reveal>
+                <div class="testi-stars" aria-label="Rated 5 out of 5">★★★★★</div>
+                <blockquote>"Down 9kg in 12 weeks — and I finally understand how to train. Chuks builds the plan around your life, not the other way round."</blockquote>
+                <figcaption><span class="t-name">Aisha O.</span><span class="t-meta">Online coaching · 12 weeks</span></figcaption>
+              </figure>
+              <figure class="testi-card" data-reveal>
+                <div class="testi-stars" aria-label="Rated 5 out of 5">★★★★★</div>
+                <blockquote>"First coach who actually corrects every lift. My deadlift is up 40kg and nothing hurts anymore. Worth every single session."</blockquote>
+                <figcaption><span class="t-name">Marcus T.</span><span class="t-meta">1:1 in-person · London</span></figcaption>
+              </figure>
+              <figure class="testi-card" data-reveal>
+                <div class="testi-stars" aria-label="Rated 5 out of 5">★★★★★</div>
+                <blockquote>"The weekly check-ins kept me honest when life got busy. Strongest and leanest I've been at 38 — no fads, just the work."</blockquote>
+                <figcaption><span class="t-name">Dani R.</span><span class="t-meta">Hybrid · 6 months</span></figcaption>
+              </figure>
+            </div>
           </div>
         </section>
 
@@ -342,7 +378,7 @@
           <div class="footer-logo">Chuks</div>
           <div class="footer-bottom">
             <span>© 2026 Chuks Fitness — Online &amp; in-person coaching</span>
-            <span>Made with <span class="text-brand">♥</span> for the work</span>
+            <a href="https://www.bridgewayaibootcamp.com" target="_blank" rel="noopener" class="credit-wiggle">Designed by Bridgeway&nbsp;AI&nbsp;Bootcamp</a>
           </div>
         </div>
       </footer>
@@ -356,9 +392,6 @@
   <script src="vendor/gsap/ScrollSmoother.min.js"></script>
   <script src="vendor/gsap/SplitText.min.js"></script>
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="vendor/lightgallery/lightgallery.umd.js"></script>
-  <script src="vendor/lightgallery/plugins/lg-zoom.umd.js"></script>
-  <script src="vendor/lightgallery/plugins/lg-thumbnail.umd.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
