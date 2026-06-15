@@ -94,9 +94,20 @@
     let rotTl = null;   // word rotator timeline
 
     // slow cinematic zoom (the pause button toggles this)
+    // On mobile the portrait crop leaves dead space above the subject, so we
+    // anchor the zoom to the bottom and start more zoomed-in — this lifts his
+    // head up near the top of the frame.
     if (heroImg) {
-      if (reduced) gsap.set(heroImg, { scale: 1.04 });
-      else kb = gsap.to(heroImg, { scale: 1.14, duration: 16, ease: "none", repeat: -1, yoyo: true });
+      const mobile = window.matchMedia("(max-width: 1023px)").matches;
+      if (mobile) gsap.set(heroImg, { transformOrigin: "50% 100%" });
+      if (reduced) {
+        gsap.set(heroImg, { scale: mobile ? 1.26 : 1.04 });
+      } else if (mobile) {
+        gsap.set(heroImg, { scale: 1.26 });
+        kb = gsap.to(heroImg, { scale: 1.32, duration: 16, ease: "none", repeat: -1, yoyo: true });
+      } else {
+        kb = gsap.to(heroImg, { scale: 1.14, duration: 16, ease: "none", repeat: -1, yoyo: true });
+      }
     }
 
     if (pause) {
